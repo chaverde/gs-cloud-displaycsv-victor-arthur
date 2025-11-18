@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Startup Data - DisplayCSV</title>
-    <style>
+<meta charset="UTF-8">
+<title>DisplayCSV</title>
+<style>
         table {
             border-collapse: collapse;
             width: 100%;
@@ -13,32 +13,32 @@
             padding: 8px;
         }
         th {
-            background-color: #eee;
+            background: #eee;
         }
-    </style>
+</style>
 </head>
 <body>
-
-<h2>Startup Data - Exibição do CSV</h2>
-
+ 
+<h2>Dados do CSV</h2>
+ 
 <table>
-    <thead>
-        <tr>
-            {% for col in colunas %}
-                <th>{{ col }}</th>
+<thead>
+<tr>
+            {% for coluna in colunas %}
+<th>{{ coluna }}</th>
             {% endfor %}
-        </tr>
-    </thead>
-    <tbody>
-        {% for row in dados %}
-            <tr>
-                {% for col in colunas %}
-                    <td>{{ row[col] }}</td>
+</tr>
+</thead>
+<tbody>
+        {% for linha in dados %}
+<tr>
+                {% for coluna in colunas %}
+<td>{{ linha[coluna] }}</td>
                 {% endfor %}
-            </tr>
+</tr>
         {% endfor %}
-    </tbody>
+</tbody>
 </table>
-
+ 
 </body>
 </html>
